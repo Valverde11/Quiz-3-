@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="520" viewBox="0 0 820 520" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="410" y="30" text-anchor="middle" font-size="18" font-weight="bold">Búsqueda binaria: comparaciones vs O(log n)</text>
+<line x1="90" y1="445" x2="790" y2="445" stroke="#e0e0e0"/>
+<text x="82" y="449" text-anchor="end" font-size="12">5</text>
+<line x1="90" y1="347.5" x2="790" y2="347.5" stroke="#e0e0e0"/>
+<text x="82" y="351.5" text-anchor="end" font-size="12">10</text>
+<line x1="90" y1="250" x2="790" y2="250" stroke="#e0e0e0"/>
+<text x="82" y="254" text-anchor="end" font-size="12">15</text>
+<line x1="90" y1="152.5" x2="790" y2="152.5" stroke="#e0e0e0"/>
+<text x="82" y="156.5" text-anchor="end" font-size="12">20</text>
+<line x1="90" y1="55" x2="790" y2="55" stroke="#e0e0e0"/>
+<text x="82" y="59" text-anchor="end" font-size="12">25</text>
+<line x1="104.384" y1="55" x2="104.384" y2="445" stroke="#e0e0e0"/>
+<text x="104.384" y="465" text-anchor="middle" font-size="13">2¹⁰</text>
+<line x1="200.274" y1="55" x2="200.274" y2="445" stroke="#e0e0e0"/>
+<text x="200.274" y="465" text-anchor="middle" font-size="13">2¹²</text>
+<line x1="296.164" y1="55" x2="296.164" y2="445" stroke="#e0e0e0"/>
+<text x="296.164" y="465" text-anchor="middle" font-size="13">2¹⁴</text>
+<line x1="392.055" y1="55" x2="392.055" y2="445" stroke="#e0e0e0"/>
+<text x="392.055" y="465" text-anchor="middle" font-size="13">2¹⁶</text>
+<line x1="487.945" y1="55" x2="487.945" y2="445" stroke="#e0e0e0"/>
+<text x="487.945" y="465" text-anchor="middle" font-size="13">2¹⁸</text>
+<line x1="583.836" y1="55" x2="583.836" y2="445" stroke="#e0e0e0"/>
+<text x="583.836" y="465" text-anchor="middle" font-size="13">2²⁰</text>
+<line x1="679.726" y1="55" x2="679.726" y2="445" stroke="#e0e0e0"/>
+<text x="679.726" y="465" text-anchor="middle" font-size="13">2²²</text>
+<line x1="775.616" y1="55" x2="775.616" y2="445" stroke="#e0e0e0"/>
+<text x="775.616" y="465" text-anchor="middle" font-size="13">2²⁴</text>
+<rect x="90" y="55" width="700" height="390" fill="none" stroke="#333"/>
+<text x="440" y="500" text-anchor="middle" font-size="14">Tamaño del arreglo (n)</text>
+<text transform="translate(22,250) rotate(-90)" text-anchor="middle" font-size="14">Comparaciones promedio</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.2" points="104.384,360.051 152.329,340.019 200.274,320.615 248.219,301.121 296.164,281.675 344.11,262.084 392.055,242.623 440,223.198 487.945,203.619 535.89,184.15 583.836,164.677 631.781,145.161 679.726,125.646 727.671,106.165 775.616,86.685 "/>
+<circle cx="104.384" cy="360.051" r="4" fill="#1f77b4"/>
+<circle cx="152.329" cy="340.019" r="4" fill="#1f77b4"/>
+<circle cx="200.274" cy="320.615" r="4" fill="#1f77b4"/>
+<circle cx="248.219" cy="301.121" r="4" fill="#1f77b4"/>
+<circle cx="296.164" cy="281.675" r="4" fill="#1f77b4"/>
+<circle cx="344.11" cy="262.084" r="4" fill="#1f77b4"/>
+<circle cx="392.055" cy="242.623" r="4" fill="#1f77b4"/>
+<circle cx="440" cy="223.198" r="4" fill="#1f77b4"/>
+<circle cx="487.945" cy="203.619" r="4" fill="#1f77b4"/>
+<circle cx="535.89" cy="184.15" r="4" fill="#1f77b4"/>
+<circle cx="583.836" cy="164.677" r="4" fill="#1f77b4"/>
+<circle cx="631.781" cy="145.161" r="4" fill="#1f77b4"/>
+<circle cx="679.726" cy="125.646" r="4" fill="#1f77b4"/>
+<circle cx="727.671" cy="106.165" r="4" fill="#1f77b4"/>
+<circle cx="775.616" cy="86.685" r="4" fill="#1f77b4"/>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.2" stroke-dasharray="7 4" points="104.384,354.22 152.329,335.392 200.274,316.564 248.219,297.735 296.164,278.907 344.11,260.079 392.055,241.251 440,222.423 487.945,203.595 535.89,184.767 583.836,165.939 631.781,147.111 679.726,128.283 727.671,109.455 775.616,90.627 "/>
+<rect x="100.884" y="350.72" width="7" height="7" fill="#ff7f0e"/>
+<rect x="148.829" y="331.892" width="7" height="7" fill="#ff7f0e"/>
+<rect x="196.774" y="313.064" width="7" height="7" fill="#ff7f0e"/>
+<rect x="244.719" y="294.235" width="7" height="7" fill="#ff7f0e"/>
+<rect x="292.664" y="275.407" width="7" height="7" fill="#ff7f0e"/>
+<rect x="340.61" y="256.579" width="7" height="7" fill="#ff7f0e"/>
+<rect x="388.555" y="237.751" width="7" height="7" fill="#ff7f0e"/>
+<rect x="436.5" y="218.923" width="7" height="7" fill="#ff7f0e"/>
+<rect x="484.445" y="200.095" width="7" height="7" fill="#ff7f0e"/>
+<rect x="532.39" y="181.267" width="7" height="7" fill="#ff7f0e"/>
+<rect x="580.336" y="162.439" width="7" height="7" fill="#ff7f0e"/>
+<rect x="628.281" y="143.611" width="7" height="7" fill="#ff7f0e"/>
+<rect x="676.226" y="124.783" width="7" height="7" fill="#ff7f0e"/>
+<rect x="724.171" y="105.955" width="7" height="7" fill="#ff7f0e"/>
+<rect x="772.116" y="87.127" width="7" height="7" fill="#ff7f0e"/>
+<rect x="102" y="67" width="232" height="56" fill="white" fill-opacity="0.9" stroke="#bbb" rx="4"/>
+<line x1="110" y1="83" x2="136" y2="83" stroke="#1f77b4" stroke-width="2.2"/>
+<text x="144" y="87" font-size="13">Empírico</text>
+<line x1="110" y1="105" x2="136" y2="105" stroke="#ff7f0e" stroke-width="2.2" stroke-dasharray="7 4"/>
+<text x="144" y="109" font-size="13">Teórico  0.966·log₂(n)</text>
+</svg>

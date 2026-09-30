@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="520" viewBox="0 0 820 520" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="410" y="30" text-anchor="middle" font-size="18" font-weight="bold">Búsqueda binaria: tiempo, todos los tamaños</text>
+<line x1="90" y1="445" x2="790" y2="445" stroke="#e0e0e0"/>
+<text x="82" y="449" text-anchor="end" font-size="12">0</text>
+<line x1="90" y1="347.5" x2="790" y2="347.5" stroke="#e0e0e0"/>
+<text x="82" y="351.5" text-anchor="end" font-size="12">100</text>
+<line x1="90" y1="250" x2="790" y2="250" stroke="#e0e0e0"/>
+<text x="82" y="254" text-anchor="end" font-size="12">200</text>
+<line x1="90" y1="152.5" x2="790" y2="152.5" stroke="#e0e0e0"/>
+<text x="82" y="156.5" text-anchor="end" font-size="12">300</text>
+<line x1="90" y1="55" x2="790" y2="55" stroke="#e0e0e0"/>
+<text x="82" y="59" text-anchor="end" font-size="12">400</text>
+<line x1="104.384" y1="55" x2="104.384" y2="445" stroke="#e0e0e0"/>
+<text x="104.384" y="465" text-anchor="middle" font-size="13">2¹⁰</text>
+<line x1="200.274" y1="55" x2="200.274" y2="445" stroke="#e0e0e0"/>
+<text x="200.274" y="465" text-anchor="middle" font-size="13">2¹²</text>
+<line x1="296.164" y1="55" x2="296.164" y2="445" stroke="#e0e0e0"/>
+<text x="296.164" y="465" text-anchor="middle" font-size="13">2¹⁴</text>
+<line x1="392.055" y1="55" x2="392.055" y2="445" stroke="#e0e0e0"/>
+<text x="392.055" y="465" text-anchor="middle" font-size="13">2¹⁶</text>
+<line x1="487.945" y1="55" x2="487.945" y2="445" stroke="#e0e0e0"/>
+<text x="487.945" y="465" text-anchor="middle" font-size="13">2¹⁸</text>
+<line x1="583.836" y1="55" x2="583.836" y2="445" stroke="#e0e0e0"/>
+<text x="583.836" y="465" text-anchor="middle" font-size="13">2²⁰</text>
+<line x1="679.726" y1="55" x2="679.726" y2="445" stroke="#e0e0e0"/>
+<text x="679.726" y="465" text-anchor="middle" font-size="13">2²²</text>
+<line x1="775.616" y1="55" x2="775.616" y2="445" stroke="#e0e0e0"/>
+<text x="775.616" y="465" text-anchor="middle" font-size="13">2²⁴</text>
+<rect x="90" y="55" width="700" height="390" fill="none" stroke="#333"/>
+<text x="440" y="500" text-anchor="middle" font-size="14">Tamaño del arreglo (n)</text>
+<text transform="translate(22,250) rotate(-90)" text-anchor="middle" font-size="14">Tiempo por búsqueda (ns, mínimo de 9 corridas)</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.2" points="104.384,412.272 152.329,408.059 200.274,404.4 248.219,400.852 296.164,393.66 344.11,386.515 392.055,379.989 440,373.579 487.945,353.517 535.89,345.601 583.836,324.351 631.781,312.145 679.726,298.042 727.671,268.306 775.616,147.951 "/>
+<circle cx="104.384" cy="412.272" r="4" fill="#1f77b4"/>
+<circle cx="152.329" cy="408.059" r="4" fill="#1f77b4"/>
+<circle cx="200.274" cy="404.4" r="4" fill="#1f77b4"/>
+<circle cx="248.219" cy="400.852" r="4" fill="#1f77b4"/>
+<circle cx="296.164" cy="393.66" r="4" fill="#1f77b4"/>
+<circle cx="344.11" cy="386.515" r="4" fill="#1f77b4"/>
+<circle cx="392.055" cy="379.989" r="4" fill="#1f77b4"/>
+<circle cx="440" cy="373.579" r="4" fill="#1f77b4"/>
+<circle cx="487.945" cy="353.517" r="4" fill="#1f77b4"/>
+<circle cx="535.89" cy="345.601" r="4" fill="#1f77b4"/>
+<circle cx="583.836" cy="324.351" r="4" fill="#1f77b4"/>
+<circle cx="631.781" cy="312.145" r="4" fill="#1f77b4"/>
+<circle cx="679.726" cy="298.042" r="4" fill="#1f77b4"/>
+<circle cx="727.671" cy="268.306" r="4" fill="#1f77b4"/>
+<circle cx="775.616" cy="147.951" r="4" fill="#1f77b4"/>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.2" stroke-dasharray="7 4" points="104.384,414.584 152.329,408.965 200.274,403.345 248.219,397.726 296.164,392.106 344.11,386.486 392.055,380.867 440,375.247 487.945,369.627 535.89,364.008 583.836,358.388 631.781,352.768 679.726,347.149 727.671,341.529 775.616,335.909 "/>
+<rect x="100.884" y="411.084" width="7" height="7" fill="#ff7f0e"/>
+<rect x="148.829" y="405.465" width="7" height="7" fill="#ff7f0e"/>
+<rect x="196.774" y="399.845" width="7" height="7" fill="#ff7f0e"/>
+<rect x="244.719" y="394.226" width="7" height="7" fill="#ff7f0e"/>
+<rect x="292.664" y="388.606" width="7" height="7" fill="#ff7f0e"/>
+<rect x="340.61" y="382.986" width="7" height="7" fill="#ff7f0e"/>
+<rect x="388.555" y="377.367" width="7" height="7" fill="#ff7f0e"/>
+<rect x="436.5" y="371.747" width="7" height="7" fill="#ff7f0e"/>
+<rect x="484.445" y="366.127" width="7" height="7" fill="#ff7f0e"/>
+<rect x="532.39" y="360.508" width="7" height="7" fill="#ff7f0e"/>
+<rect x="580.336" y="354.888" width="7" height="7" fill="#ff7f0e"/>
+<rect x="628.281" y="349.268" width="7" height="7" fill="#ff7f0e"/>
+<rect x="676.226" y="343.649" width="7" height="7" fill="#ff7f0e"/>
+<rect x="724.171" y="338.029" width="7" height="7" fill="#ff7f0e"/>
+<rect x="772.116" y="332.409" width="7" height="7" fill="#ff7f0e"/>
+<rect x="102" y="67" width="302" height="56" fill="white" fill-opacity="0.9" stroke="#bbb" rx="4"/>
+<line x1="110" y1="83" x2="136" y2="83" stroke="#1f77b4" stroke-width="2.2"/>
+<text x="144" y="87" font-size="13">Empírico</text>
+<line x1="110" y1="105" x2="136" y2="105" stroke="#ff7f0e" stroke-width="2.2" stroke-dasharray="7 4"/>
+<text x="144" y="109" font-size="13">Teórico (ajustado con n ≤ 2¹⁷)</text>
+</svg>
