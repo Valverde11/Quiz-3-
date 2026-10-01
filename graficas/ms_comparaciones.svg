@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="520" viewBox="0 0 820 520" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="410" y="30" text-anchor="middle" font-size="18" font-weight="bold">Mergesort: comparaciones vs O(n log n)</text>
+<line x1="90" y1="445" x2="790" y2="445" stroke="#e0e0e0"/>
+<text x="82" y="449" text-anchor="end" font-size="12">0</text>
+<line x1="90" y1="315" x2="790" y2="315" stroke="#e0e0e0"/>
+<text x="82" y="319" text-anchor="end" font-size="12">50M</text>
+<line x1="90" y1="185" x2="790" y2="185" stroke="#e0e0e0"/>
+<text x="82" y="189" text-anchor="end" font-size="12">100M</text>
+<line x1="90" y1="55" x2="790" y2="55" stroke="#e0e0e0"/>
+<text x="82" y="59" text-anchor="end" font-size="12">150M</text>
+<line x1="90" y1="55" x2="90" y2="445" stroke="#e0e0e0"/>
+<text x="90" y="465" text-anchor="middle" font-size="12">0</text>
+<line x1="230" y1="55" x2="230" y2="445" stroke="#e0e0e0"/>
+<text x="230" y="465" text-anchor="middle" font-size="12">1M</text>
+<line x1="370" y1="55" x2="370" y2="445" stroke="#e0e0e0"/>
+<text x="370" y="465" text-anchor="middle" font-size="12">2M</text>
+<line x1="510" y1="55" x2="510" y2="445" stroke="#e0e0e0"/>
+<text x="510" y="465" text-anchor="middle" font-size="12">3M</text>
+<line x1="650" y1="55" x2="650" y2="445" stroke="#e0e0e0"/>
+<text x="650" y="465" text-anchor="middle" font-size="12">4M</text>
+<line x1="790" y1="55" x2="790" y2="445" stroke="#e0e0e0"/>
+<text x="790" y="465" text-anchor="middle" font-size="12">5M</text>
+<rect x="90" y="55" width="700" height="390" fill="none" stroke="#333"/>
+<text x="440" y="500" text-anchor="middle" font-size="14">Tamaño del arreglo (n)</text>
+<text transform="translate(22,250) rotate(-90)" text-anchor="middle" font-size="14">Comparaciones promedio</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.2" points="91.4,444.687 92.8,444.322 97,443.133 104,441.005 118,436.491 160,422.023 230,396.447 370,342.693 790,171.87 "/>
+<circle cx="91.4" cy="444.687" r="4" fill="#1f77b4"/>
+<circle cx="92.8" cy="444.322" r="4" fill="#1f77b4"/>
+<circle cx="97" cy="443.133" r="4" fill="#1f77b4"/>
+<circle cx="104" cy="441.005" r="4" fill="#1f77b4"/>
+<circle cx="118" cy="436.491" r="4" fill="#1f77b4"/>
+<circle cx="160" cy="422.023" r="4" fill="#1f77b4"/>
+<circle cx="230" cy="396.447" r="4" fill="#1f77b4"/>
+<circle cx="370" cy="342.693" r="4" fill="#1f77b4"/>
+<circle cx="790" cy="171.87" r="4" fill="#1f77b4"/>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.2" stroke-dasharray="7 4" points="91.4,444.674 92.8,444.299 97,443.086 104,440.926 118,436.362 160,421.783 230,396.114 370,342.323 790,172.095 "/>
+<rect x="87.9" y="441.174" width="7" height="7" fill="#ff7f0e"/>
+<rect x="89.3" y="440.799" width="7" height="7" fill="#ff7f0e"/>
+<rect x="93.5" y="439.586" width="7" height="7" fill="#ff7f0e"/>
+<rect x="100.5" y="437.426" width="7" height="7" fill="#ff7f0e"/>
+<rect x="114.5" y="432.862" width="7" height="7" fill="#ff7f0e"/>
+<rect x="156.5" y="418.283" width="7" height="7" fill="#ff7f0e"/>
+<rect x="226.5" y="392.614" width="7" height="7" fill="#ff7f0e"/>
+<rect x="366.5" y="338.823" width="7" height="7" fill="#ff7f0e"/>
+<rect x="786.5" y="168.595" width="7" height="7" fill="#ff7f0e"/>
+<rect x="102" y="67" width="253" height="56" fill="white" fill-opacity="0.9" stroke="#bbb" rx="4"/>
+<line x1="110" y1="83" x2="136" y2="83" stroke="#1f77b4" stroke-width="2.2"/>
+<text x="144" y="87" font-size="13">Empírico</text>
+<line x1="110" y1="105" x2="136" y2="105" stroke="#ff7f0e" stroke-width="2.2" stroke-dasharray="7 4"/>
+<text x="144" y="109" font-size="13">Teórico  0.943·n·log₂(n)</text>
+</svg>

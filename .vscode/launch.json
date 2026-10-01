@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar y ejecutar benchmark",
+      "type": "shell",
+      "command": "g++ -O2 -std=c++17 -o benchmark benchmark.cpp && ./benchmark",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
