@@ -1,17 +1,4 @@
-/*
- * Quiz #3 - Análisis de Algoritmos (CE-2103)
- * Análisis empírico de Búsqueda Binaria O(log n) y Mergesort O(n log n).
- *
- * Todo en C++: algoritmos, benchmark, ajuste teórico (mínimos cuadrados),
- * CSV y gráficas SVG.
- *
- * Para cada algoritmo se mide:
- *   1. Tiempo de ejecución real (std::chrono::steady_clock)
- *   2. Número de comparaciones (independiente de la máquina)
- *
- * Compilar:  g++ -O2 -std=c++17 -o benchmark benchmark.cpp
- * Ejecutar:  ./benchmark
- */
+
 #include <algorithm>
 #include <array>
 #include <chrono>
@@ -29,19 +16,14 @@
 using namespace std;
 using Reloj = chrono::steady_clock;
 
-static mt19937_64 rng(2103);  // semilla fija: reproducibilidad
-
-// Arreglos con n <= LIMITE_CACHE caben en caché L2 (~512 KB). Se usa para ajustar
-// el tiempo de búsqueda binaria sin el efecto de los fallos de caché.
-// Si en su computadora la curva se separa antes o después, ajuste este valor.
+static mt19937_64 rng(2103);  
 static const double LIMITE_CACHE = (double)(1 << 17);
 
 static const string DIR_RES = "resultados";
 static const string DIR_GRAF = "graficas";
 
-// ============================================================================
 // Búsqueda binaria
-// ============================================================================
+
 
 // Versión para medir tiempo (sin contador)
 int busquedaBinaria(const vector<int>& arr, int objetivo) {
@@ -55,7 +37,7 @@ int busquedaBinaria(const vector<int>& arr, int objetivo) {
     return -1;
 }
 
-// Versión para contar comparaciones (1 comparación de tres vías por iteración)
+// Versión para contar comparaciones 
 int busquedaBinariaContada(const vector<int>& arr, int objetivo, long long& comps) {
     int izq = 0, der = (int)arr.size() - 1;
     while (izq <= der) {
@@ -68,9 +50,8 @@ int busquedaBinariaContada(const vector<int>& arr, int objetivo, long long& comp
     return -1;
 }
 
-// ============================================================================
+
 // Mergesort
-// ============================================================================
 void mezclar(vector<int>& a, vector<int>& tmp, int izq, int medio, int der, long long& comps) {
     int i = izq, j = medio + 1, k = izq;
     while (i <= medio && j <= der) {
@@ -98,15 +79,14 @@ long long mergesort(vector<int>& a) {
     return comps;
 }
 
-// ============================================================================
 // Resultados y ajuste teórico
-// ============================================================================
+
 struct Resultados {
     vector<double> n, tiempo, comps;  // tiempo en ns (búsqueda) o ms (mergesort)
 };
 
 struct Ajuste {
-    double c, a, r2;  // y ≈ c·x + a
+    double c, a, r2;  
 };
 
 // Mínimos cuadrados. Con intercepto=false ajusta y ≈ c·x (a = 0).
@@ -160,9 +140,8 @@ void guardarCSV(const string& ruta, const string& colTiempo, const Resultados& r
         f << (long long)r.n[i] << "," << r.tiempo[i] << "," << r.comps[i] << "\n";
 }
 
-// ============================================================================
+
 // Benchmarks
-// ============================================================================
 Resultados benchBusquedaBinaria() {
     const int BUSQUEDAS = 1000000;  // búsquedas por repetición
     const int REPS = 9;             // repeticiones (se toma el mínimo)
@@ -171,21 +150,21 @@ Resultados benchBusquedaBinaria() {
     for (int k = 10; k <= 24; k++) {  // n = 2^10 ... 2^24
         int n = 1 << k;
 
-        // Arreglo de n valores random, ordenado (requisito de búsqueda binaria)
+        // Arreglo de n valores random, ordenado 
         uniform_int_distribution<int> dist(0, n * 8);
         vector<int> arr(n);
         for (auto& x : arr) x = dist(rng);
         sort(arr.begin(), arr.end());
 
-        // Objetivos: 50 % existentes, 50 % random (probablemente inexistentes)
+        // Objetivos: 50 % existentes, 50 % random 
         vector<int> objetivos(BUSQUEDAS);
         uniform_int_distribution<int> idx(0, n - 1);
         for (int i = 0; i < BUSQUEDAS; i++)
             objetivos[i] = (i % 2 == 0) ? arr[idx(rng)] : dist(rng);
 
-        // Tiempo (mínimo de REPS repeticiones)
+        // Tiempo 
         double mejor = 1e18;
-        volatile long long sumidero = 0;  // evita que el compilador elimine el ciclo
+        volatile long long sumidero = 0; 
         for (int r = 0; r < REPS; r++) {
             long long acum = 0;
             auto t0 = Reloj::now();
@@ -195,7 +174,7 @@ Resultados benchBusquedaBinaria() {
             mejor = min(mejor, chrono::duration<double, nano>(t1 - t0).count() / BUSQUEDAS);
         }
 
-        // Comparaciones (pasada aparte, para no contaminar el tiempo)
+        // Comparaciones 
         long long comps = 0;
         for (int i = 0; i < BUSQUEDAS; i++) busquedaBinariaContada(arr, objetivos[i], comps);
         double compsProm = (double)comps / BUSQUEDAS;
@@ -218,14 +197,14 @@ Resultados benchMergesort() {
         double mejor = 1e18, sumaComps = 0;
         for (int r = 0; r < REPS; r++) {
             vector<int> arr(n);
-            for (auto& x : arr) x = (int)(rng() % 1000000000ULL);  // valores random
+            for (auto& x : arr) x = (int)(rng() % 1000000000ULL); 
             vector<int> copia = arr;
 
             auto t0 = Reloj::now();
             long long comps = mergesort(arr);
             auto t1 = Reloj::now();
 
-            sort(copia.begin(), copia.end());  // verificación de correctitud
+            sort(copia.begin(), copia.end());  
             if (arr != copia) {
                 cerr << "ERROR: mergesort produjo un resultado incorrecto\n";
                 exit(1);
@@ -242,9 +221,8 @@ Resultados benchMergesort() {
     return res;
 }
 
-// ============================================================================
+
 // Gráficas + resumen
-// ============================================================================
 Grafica nuevaGrafica(const string& titulo, const string& ey, bool logX) {
     Grafica g;
     g.titulo = titulo;
